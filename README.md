@@ -20,3 +20,10 @@ The resulting intervals are guaranteed, under minimal assumptions, to contain th
 Cross-validation conformal regression extends conformal prediction by using K-Fold Cross Validation instead of a single calibration split. The dataset is divided into K folds, and for each fold, a regression model is trained on the remaining K-1 folds and used to predict the left-out fold. This ensures that every data points receives an out-of-fold prediction from a model that was not trained on it. 
 
 The absolute residuals from all folds are then pooled together to estimate a global error distribution. A quantile of these residuals, based on a chosen significance level $\alpha$, is used to construct prediction intervals around the out-of-fold predictions. These intervals provide distribution-free uncertainty estimates and achieve approximately $1-\alpha$ empirical coverage while efficienctly using the entire dataset. 
+
+## **Important Metrics used in Conformal Regression**
+1. Empirical Coverage - measures the proportion of true target values that fall within the prediction intervals. It indicates how reliable the intervals are and should be close to the nominal confidence level $1-\alpha$
+
+2. Average Interval Length (or Width) - Computes the average width of the prediction intervals. It reflects the uncertainty of the predictions - shorter intervals are preferred as long as the desired coverage is maintained. 
+
+3. Significance Level $(\alpha)$ - controls the confidence levels of the prediction intervals. A smaller $\alpha$ produces wider intervals with higher coverage, while a larger $\alpha$ yields narrower intervals. 
