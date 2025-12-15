@@ -15,3 +15,8 @@ Split conformal regression is a distribution-free method used to quantify uncert
 These residuals are used to estimate a **quantile threshold** based on a chosen significance level $\alpha$. This threshold represents how large the prediction error typically is. When making predictions on new test data, the model's point predictions are expanded by this threshold to form **prediction intervals**. 
 
 The resulting intervals are guaranteed, under minimal assumptions, to contain the true target value with probability approximately $1 - \alpha$. The quality of these intervals is evaluated using empirical coverage (how often the true values fall inside the intervals) and average interval length (how wide the intervals are).
+
+## **Cross-Validation Conformal Regression:**
+Cross-validation conformal regression extends conformal prediction by using K-Fold Cross Validation instead of a single calibration split. The dataset is divided into K folds, and for each fold, a regression model is trained on the remaining K-1 folds and used to predict the left-out fold. This ensures that every data points receives an out-of-fold prediction from a model that was not trained on it. 
+
+The absolute residuals from all folds are then pooled together to estimate a global error distribution. A quantile of these residuals, based on a chosen significance level $\alpha$, is used to construct prediction intervals around the out-of-fold predictions. These intervals provide distribution-free uncertainty estimates and achieve approximately $1-\alpha$ empirical coverage while efficienctly using the entire dataset. 
