@@ -31,7 +31,11 @@ Bootstrap conformal regression estimates prediction uncertainity by repeatedly r
 
 3. Significance Level $(\alpha)$ - controls the confidence levels of the prediction intervals. A smaller $\alpha$ produces wider intervals with higher coverage, while a larger $\alpha$ yields narrower intervals. 
 
-## **Comparison Between Split, Cross-Validation (CV), and Bootstrap Conformal Regression**
+## **Comparison Between Split, Cross-Validation (CV), and Bootstrap Conformal Regression:**
 - Split conformal: fatest and simplest, but least data-efficient
 - CV conformal: best balance between coverage accuracy and interval width
 - Bootstrap conformal: most conservative with highest computational cost 
+
+## **References:**
+Meehinkong, P., & Ponnoprat, D. (2025). coverforest: Conformal Predictions with Random Forest in Python. ArXiv.org. https://arxiv.org/abs/2501.14570
+
