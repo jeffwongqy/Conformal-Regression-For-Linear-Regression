@@ -1,7 +1,7 @@
 # Conformal Regression for Linear Regression 
 
 ## **Aim:**
-To develop a reliable regression model that provides not only point predictions but also valid predictio intervals, using conformal prediction methods to quantify uncertainty. 
+To develop a reliable regression model that provides not only point predictions but also valid prediction intervals, using conformal prediction methods to quantify uncertainty. 
 
 ## **Objectives:**
 - To implement linear regression models on a synthetic dataset using train-test split and cross-validation.
